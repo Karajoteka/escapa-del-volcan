@@ -212,6 +212,7 @@ function moveByKeys(event) {
   else if (event.key == 'ArrowRight') moveRight();
   else if (event.key == 'ArrowDown') moveDown();
 }
+
 function moveUp() {
   console.log('Me quiero mover hacia arriba');
 
