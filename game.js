@@ -10,7 +10,7 @@ const spanRecord = document.querySelector('#record');
 const pResult = document.querySelector('#result');
 const restartButton = document.querySelector('#restart-button');
 
-let canvasSize;
+let canvasSize = Math.round((innerHeight * 0.8).toFixed(2));
 let elementsSize;
 let level = 0;
 let lives = 3;
@@ -47,10 +47,10 @@ function setCanvasSize() {
 
   canvasSize = Number(canvasSize.toFixed(0));
   
-  canvas.setAttribute('width', canvasSize);
-  canvas.setAttribute('height', canvasSize);
-  
-  elementsSize = canvasSize / 10;
+  canvas.setAttribute('width', canvasSize.toFixed(0));
+  canvas.setAttribute('height', canvasSize.toFixed(0));
+
+  elementsSize = Math.floor(canvasSize / 10);
 
   startGame();
 }
