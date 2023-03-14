@@ -7,8 +7,11 @@ const btnDown = document.querySelector('#down');
 const spanLives = document.querySelector('#lives');
 const spanTime = document.querySelector('#time');
 const spanRecord = document.querySelector('#record');
+const timeGame = document.querySelector('.time');
+const winnerScreen = document.querySelector('#winner-screen');
+const loserScreen = document.querySelector('#loser-screen');
 const pResult = document.querySelector('#result');
-const restartButton = document.querySelector('#restart-button');
+const restartButton = document.querySelector('.restart-button');
 
 let canvasSize = Math.round((innerHeight * 0.8).toFixed(2));
 let elementsSize;
@@ -40,9 +43,9 @@ function fixNumber(n) {
  
 function setCanvasSize() {
   if (window.innerHeight > window.innerWidth) {
-    canvasSize = window.innerWidth * 0.8;
+    canvasSize = window.innerWidth * 0.5;
   } else {
-    canvasSize = window.innerHeight * 0.8;
+    canvasSize = window.innerHeight * 0.5;
   }
 
   canvasSize = Number(canvasSize.toFixed(0));
@@ -149,6 +152,7 @@ function levelFail() {
     level = 0; 
     lives = 3;
     timeStart = undefined;
+    loserScreen.classList.remove('inactive');
   } 
     
   playerPosition.x = undefined;
@@ -166,14 +170,17 @@ function gameWin() {
   if (recordTime) {
     if (recordTime >= playerTime) {
       localStorage.setItem('record_time', playerTime);
-      pResult.innerHTML = 'Has batido el record!';
+      pResult.innerHTML = '¡Has batido el record!';
     } else {
-      pResult.innerHTML = 'Lo siento, ho has superado el record';
+      pResult.innerHTML = 'Lo siento, no has superado el record';
     }
   } else {
     localStorage.setItem('record_time', playerTime);
     pResult.innerHTML = 'Ahora trata de superar tu tiempo';
   }
+
+  timeGame.innerHTML = formatTime(Date.now() - timeStart);
+  winnerScreen.classList.remove('inactive');
 
   console.log({recordTime, playerTime});
 }

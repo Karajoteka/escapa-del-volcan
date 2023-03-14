@@ -4,30 +4,55 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
-  <title>Platzriv - Jueguito online de carreras</title>
+  <title>Escapa del volcán</title>
 </head>
 <body>
   <div class="game-container">
     <canvas id="game"></canvas>
 
     <div class="btns">
-      <button id="up">Arriba</button>
-      <button id="left">Izquierda</button>
-      <button id="right">Derecha</button>
-      <button id="down">Abajo</button>
+      <button id="up">
+        <img src="./imgs/up-arrow.png" alt="Up">
+      </button>
+      <button id="left">
+        <img src="./imgs/left-arrow.png" alt="Left">
+      </button>
+      <button id="right">
+        <img src="./imgs/right-arrow.png" alt="Right">
+      </button>
+      <button id="down">
+        <img src="./imgs/down-arrow.png" alt="Down">
+      </button>
     </div>
 
     <div class="messages">
       <p>Vidas: <span id="lives"></span></p>
       <p>Tiempo: ⏱ <span id="time"></span></p>
       <p>Record: 🏁 <span id="record"></span></p>
-      <p id="result"></p>
     </div>
 
-    <div>
-      <button id="restart-button">Volver a jugar</button>
+    <div id="winner-screen" class="/">
+      <p>Has terminado el juego</p>
+      <p>¡Felicidades!</p>
+      <p>⭐⭐⭐</p>
+      <p>Tiempo: <span class="time"></span></p>
+      <p id="result"></p>
+      <button class="restart-button">Volver a jugar</button>
     </div>
+
+    <div id="loser-screen" class="inactive">
+      <div class="loser-message">
+        <p>☠</p>
+        <h2>Te has quedado sin vidas</h2>
+        <p>¡Vuelve a intentarlo!</p>
+      </div>
+      <button class="restart-button">Reiniciar</button>
+    </div>
+
   </div>
 
   <script src="./maps.js"></script>
