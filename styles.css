@@ -95,10 +95,13 @@ p {
 
 #winner-screen {
   position: absolute;
-  margin: 0 auto;
+  top: 60px;
   width: 500px;
-  height: 300px;
-  background-color: aqua;
+  height: 240px;
+  background-color: rgb(12, 95, 116);
+  border: 4px solid #ff6600;
+  border-radius: 20px;
+  text-align: center;
 }
 
 #loser-screen {
