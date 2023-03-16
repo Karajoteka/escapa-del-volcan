@@ -45,9 +45,9 @@ function fixNumber(n) {
  
 function setCanvasSize() {
   if (window.innerHeight > window.innerWidth) {
-    canvasSize = window.innerWidth * 0.5;
+    canvasSize = window.innerWidth * 0.7;
   } else {
-    canvasSize = window.innerHeight * 0.5;
+    canvasSize = window.innerHeight * 0.7;
   }
 
   canvasSize = Number(canvasSize.toFixed(0));
@@ -147,6 +147,8 @@ function levelWin() {
 }
 
 function levelFail() {
+  
+
   console.log('Chocaste');
   lives--;
 

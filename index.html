@@ -11,7 +11,38 @@
   <title>Escapa del volcán</title>
 </head>
 <body>
+
+  <div id="winner-screen" class="inactive">
+    <h2>Has terminado el juego</h2>
+    <p>¡Felicidades!</p>
+    <p>🏆</p>
+    <p>Tiempo: <span class="time-game"></span></p>
+    <p id="result"></p>
+    <button class="restart-button">Volver a jugar</button>
+  </div>
+
+  <div id="loser-screen" class="inactive">
+    <div class="loser-message">
+      <h2>Te has quedado sin vidas</h2>
+      <p>¡Vuelve a intentarlo!</p>
+    </div>
+    <button class="try-again-button">Reiniciar</button>
+  </div>
+
   <div class="game-container">
+
+    <div class="messages">
+      <div class="lives">
+        <p><span id="lives"></span></p>
+      </div>
+      <div class="time">
+        <p>⏱ <span id="time"></span></p>
+      </div>
+      <div class="record">
+        <p> 🏁 <span id="record"></span></p>
+      </div>    
+    </div>
+
     <canvas id="game"></canvas>
 
     <div class="btns">
@@ -29,35 +60,9 @@
       </button>
     </div>
 
-    <div class="messages">
-      <div class="lives">
-        <p>Vidas: <span id="lives"></span></p>
-      </div>
-      <div class="time">
-        <p>Tiempo: ⏱ <span id="time"></span></p>
-      </div>
-      <div class="record">
-        <p>Record: 🏁 <span id="record"></span></p>
-      </div>    
-    </div>
 
-    <div id="winner-screen" class="inactive">
-      <h2>Has terminado el juego</h2>
-      <p>¡Felicidades!</p>
-      <p>🏆</p>
-      <p>Tiempo: <span class="time-game"></span></p>
-      <p id="result"></p>
-      <button class="restart-button">Volver a jugar</button>
-    </div>
 
-    <div id="loser-screen" class="inactive">
-      <div class="loser-message">
-        <!-- <p>☠</p> -->
-        <h2>Te has quedado sin vidas</h2>
-        <p>¡Vuelve a intentarlo!</p>
-      </div>
-      <button class="try-again-button">Reiniciar</button>
-    </div>
+
 
   </div>
 
