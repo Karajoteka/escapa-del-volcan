@@ -30,16 +30,22 @@
     </div>
 
     <div class="messages">
-      <p>Vidas: <span id="lives"></span></p>
-      <p>Tiempo: ⏱ <span id="time"></span></p>
-      <p>Record: 🏁 <span id="record"></span></p>
+      <div class="lives">
+        <p>Vidas: <span id="lives"></span></p>
+      </div>
+      <div class="time">
+        <p>Tiempo: ⏱ <span id="time"></span></p>
+      </div>
+      <div class="record">
+        <p>Record: 🏁 <span id="record"></span></p>
+      </div>    
     </div>
 
     <div id="winner-screen" class="/">
       <p>Has terminado el juego</p>
       <p>¡Felicidades!</p>
-      <p>⭐⭐⭐</p>
-      <p>Tiempo: <span class="time"></span></p>
+      <p>🏆</p>
+      <p>Tiempo: <span class="time-game"></span></p>
       <p id="result"></p>
       <button class="restart-button">Volver a jugar</button>
     </div>
@@ -50,7 +56,7 @@
         <h2>Te has quedado sin vidas</h2>
         <p>¡Vuelve a intentarlo!</p>
       </div>
-      <button class="restart-button">Reiniciar</button>
+      <button class="try-again-button">Reiniciar</button>
     </div>
 
   </div>

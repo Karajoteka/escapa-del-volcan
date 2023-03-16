@@ -7,11 +7,12 @@ const btnDown = document.querySelector('#down');
 const spanLives = document.querySelector('#lives');
 const spanTime = document.querySelector('#time');
 const spanRecord = document.querySelector('#record');
-const timeGame = document.querySelector('.time');
+const timeGame = document.querySelector('.time-game');
 const winnerScreen = document.querySelector('#winner-screen');
 const loserScreen = document.querySelector('#loser-screen');
 const pResult = document.querySelector('#result');
 const restartButton = document.querySelector('.restart-button');
+const tryAgainButton = document.querySelector('.try-again-button');
 
 let canvasSize = Math.round((innerHeight * 0.8).toFixed(2));
 let elementsSize;
@@ -36,6 +37,7 @@ window.addEventListener('load', setCanvasSize);
 window.addEventListener('resize', setCanvasSize);
 
 restartButton.addEventListener('click', restartGame);
+tryAgainButton.addEventListener('click', restartGame);
 
 function fixNumber(n) {
   return Number(n.tofixed(0));
