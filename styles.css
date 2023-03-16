@@ -2,7 +2,6 @@ body {
   position: relative;
   height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   background-color: rgb(56, 151, 175);
   color: #fff;
@@ -103,7 +102,8 @@ p {
 
 #winner-screen, #loser-screen {
   position: absolute;
-  top: 60px;
+  top: 200px;
+  margin: 0 auto;
   width: 500px;
   height: 240px;
   background-color: rgb(12, 95, 116);
@@ -114,7 +114,6 @@ p {
 }
 
 #loser-screen {
-  top: 100px;
   height: 180px;
 }
 
