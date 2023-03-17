@@ -133,5 +133,18 @@ p {
 
 
 @media (max-width: 440px) {
+  #winner-screen, #loser-screen {
+    max-width: 300px;
+    
+  }
 
+  #winner-screen {
+    height: 300px;
+    top: 100px
+  }
+
+  #loser-screen {
+    height: 240px;
+    top: 120px
+  }
 }
