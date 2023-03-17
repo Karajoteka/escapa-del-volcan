@@ -33,6 +33,7 @@ canvas {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  margin: 0 auto;
 }
 
 .btns {
@@ -132,7 +133,26 @@ p {
 }
 
 
-@media (max-width: 440px) {
+@media (max-width: 550px) {
+  .messages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 0;
+  }
+
+  .lives {
+    grid-row: 2 / 3 ;
+  }
+
+  .time {
+    grid-column: 2 / 3;
+  }
+
+  .record {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
   #winner-screen, #loser-screen {
     max-width: 300px;
     
